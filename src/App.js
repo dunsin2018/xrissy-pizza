@@ -1,23 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import Header from "./components/header/Header";
+import HomePage from "./views/homePage/HomePage";
+import CartPage from "./views/cart/CartPage";
+import "./app.css";
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      welcomeMsg = "xrissy pizza"
-    };
-  }
-
-  render() {
-    const welcomeMsg = this.state;
-    const greet = () => welcomeMsg.greet
-  }
-
-  return() {
+const App = () => {
+  return (
     <div>
-      <h1>hello steve {this.welcomeMsg.greet}</h1>
-    </div>;
-  }
-}
+      <Header />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/cart" component={CartPage} />
+      </Switch>
+    </div>
+  );
+};
 
 export default App;
