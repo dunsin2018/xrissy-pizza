@@ -9,11 +9,11 @@ class HomePage extends Component {
       <div mt-5>
         <ProductSlider />
         <Container>
-          <h1 className="text-center mt-3">TRUE ITALIAN FLAVOR</h1>
-          <h4 className="text-center mt-3">
+          <h1 className="text-center mt-3 text-danger">TRUE ITALIAN FLAVOR</h1>
+          <h6 className="text-center mt-3 text-muted">
             Aliquam a augue suscipit, luctus neque purus ipsum neque undo dolor
             primis libero tempus, blandit a cursus varius magna
-          </h4>
+          </h6>
           <PizzaList />
         </Container>
       </div>

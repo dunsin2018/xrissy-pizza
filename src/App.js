@@ -9,6 +9,7 @@ const App = () => {
   return (
     <div>
       <Header />
+
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/cart" component={CartPage} />
