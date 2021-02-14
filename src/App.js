@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 import HomePage from "./views/homePage/HomePage";
 import CartPage from "./views/cart/CartPage";
 import "./app.css";
+import OrderPage from "./views/order/OrderPage";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/cart" component={CartPage} />
+        <Route exact path="/order" component={OrderPage} />
       </Switch>
     </div>
   );

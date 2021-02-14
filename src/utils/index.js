@@ -9,12 +9,13 @@ export const addItemToCart = (cartItems, itemToAdd) => {
         ? {
             ...cartItem,
             quantity: cartItem.quantity + 1,
+            total: (cartItem.quantity + 1) * cartItem.price,
           }
         : cartItem
     );
   }
 
-  return [...cartItems, { ...itemToAdd, quantity: 1 }];
+  return [...cartItems, { ...itemToAdd, quantity: 1, total: itemToAdd.price }];
 };
 
 export const removeItemFromCart = (cartItems, itemToRemove) => {
@@ -31,6 +32,7 @@ export const removeItemFromCart = (cartItems, itemToRemove) => {
       ? {
           ...cartItem,
           quantity: cartItem.quantity - 1,
+          total: (cartItem.quantity - 1) * cartItem.price,
         }
       : cartItem
   );
